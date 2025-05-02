@@ -1,0 +1,15 @@
+package app;
+
+public class DataHoraGlobal {
+
+	
+	//Convertendo data-hora global para local
+	
+	
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

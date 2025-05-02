@@ -1,0 +1,53 @@
+package app;
+
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+public class CalculoDataHora {
+
+	public static void main(String[] args) {
+		// Calculo data-hora
+		
+		LocalDate d01 = LocalDate.parse("2025-05-02");
+		LocalDateTime d02 = LocalDateTime.parse("2025-05-02T01:30:26");
+		Instant d03 = Instant.parse("2025-05-02T01:30:26Z");
+		
+		//Soma e subtração 
+		LocalDate pastWeekLocalDate = d01.minusDays(7);
+		LocalDate nexWeekLocalDate = d01.plusDays(7);
+		LocalDate nexYearsLocalDate = d01.plusYears(7);
+		
+		System.out.println("Semana Anterior = " + pastWeekLocalDate);
+		System.out.println("Proxima Semana = " + nexWeekLocalDate);
+		System.out.println("Anos = " + nexWeekLocalDate);
+		
+		LocalDateTime pastWeekLocalDateTime = d02.minusDays(7);
+		LocalDateTime nexWeekLocalDateTime = d02.plusDays(7);
+		LocalDateTime nexYearsLocalDateTime = d02.plusYears(7);
+
+		System.out.println("pastWeekLocalDateTime = " + pastWeekLocalDateTime);
+		System.out.println("nexWeekLocalDateTime  = " + nexWeekLocalDateTime);
+		System.out.println("nexWeekLocalDateTime = " + nexYearsLocalDateTime);
+		
+		Instant pastWeekInstant = d03.minus(7, ChronoUnit.DAYS);
+		Instant nexWeekInstant = d03.plus(7, ChronoUnit.DAYS);
+		
+		System.out.println("pastWeekInstant = " + pastWeekInstant);
+		System.out.println("nexWeekInstant  = " + nexWeekInstant);
+		
+		//Duração entre datas
+		
+		Duration t1 = Duration.between(pastWeekLocalDate.att, d01); //Tem que converter para um DateTime
+		Duration t2 = Duration.between(pastWeekLocalDateTime, d02);
+
+		
+		System.out.println("T1 dias = " + t1.toDays());
+		System.out.println("T2 dias = " + t2.toDays());
+
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package app;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class CalculoDataHora {
+
+	public static void main(String[] args) {
+		// Calculo data-hora
+		
+		LocalDate d01 = LocalDate.parse("2025-05-02");
+		LocalDateTime d02 = LocalDateTime.parse("2025-05-02T01:30:26");
+		Instant d03 = Instant.parse("2025-05-02T01:30:26Z");
+		
+		LocalDate pastWeekLocalDate = d01.minusDays(7);
+		LocalDate nexWeekLocalDate = d01.plusDays(7);
+		
+		
+		System.out.println("Semana Anterior = " + pastWeekLocalDate);
+		System.out.println("Proxima Semana = " + nexWeekLocalDate);
+
+
+	}
+
+}

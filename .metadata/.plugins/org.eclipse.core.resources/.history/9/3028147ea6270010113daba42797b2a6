@@ -1,0 +1,36 @@
+package app;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class CalculoDataHora {
+
+	public static void main(String[] args) {
+		// Calculo data-hora
+		
+		LocalDate d01 = LocalDate.parse("2025-05-02");
+		LocalDateTime d02 = LocalDateTime.parse("2025-05-02T01:30:26");
+		Instant d03 = Instant.parse("2025-05-02T01:30:26Z");
+		
+		//Soma e subtração 
+		LocalDate pastWeekLocalDate = d01.minusDays(7);
+		LocalDate nexWeekLocalDate = d01.plusDays(7);
+		LocalDate nexYearsLocalDate = d01.plusYears(7);
+		
+		System.out.println("Semana Anterior = " + pastWeekLocalDate);
+		System.out.println("Proxima Semana = " + nexWeekLocalDate);
+		System.out.println("Anos = " + nexWeekLocalDate);
+		
+		LocalDateTime pastWeekLocalDateTime = d02.minusDays(7);
+		LocalDateTime nexWeekLocalDateTime = d02.plusDays(7);
+		LocalDateTime nexYearsLocalDateTime = d02.plusYears(7);
+
+		System.out.println("Semana Anterior = " + pastWeekLocalDateTime);
+		System.out.println("Proxima Semana = " + nexWeekLocalDateTime);
+		System.out.println("Anos = " + nexYearsLocalDateTime);
+
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package app;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class DataHoraTexto {
+
+	public static void main(String[] args) {
+		
+		LocalDate d01 = LocalDate.parse("2025-05-02");
+		LocalDateTime d02 = LocalDateTime.parse("2025-05-02T01:20:26");
+		Instant d03 = Instant.parse("2025-05-02T01:30:26Z");
+
+	}
+
+}
